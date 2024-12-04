@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: red;
+            text-shadow: 2px 2px 8px black;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        a {
+            font-size: 1.5rem;
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #bubble {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday Baby!</h1>
+    <a id="clickable">Click here!</a>
+    <div id="bubble">kiss</div>
+
+    <script>
+        const clickable = document.getElementById('clickable');
+        const bubble = document.getElementById('bubble');
+
+        clickable.addEventListener('click', () => {
+            bubble.style.display = 'block';
+            setTimeout(() => {
+                bubble.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
